@@ -1,0 +1,227 @@
+<div class="page" size="A4">
+  <!-- Profile -->
+  <div class="profile">
+    <div class="name">
+      <div class="name-value">{{profile.name}}</div>
+      <div class="job">{{profile.job}}</div>
+    </div>
+    <div class="contact-info">
+      <div class="avatar">
+        <img src="{{profile.avatar}}" alt="Avatar" class="avatar-detail">
+      </div>
+      <div class="information">
+        <ng-container *ngFor="let item of profile.information;">
+          <p class="{{item.class}}">
+            <i class="icon icon-{{item.icon}}"></i>
+            {{item.value}}
+          </p>
+        </ng-container>
+      </div>
+      <div class="line"></div>
+      <div class="contact">
+        <ng-container *ngFor="let item of profile.contact">
+          <p class="{{item.class}}">
+            <i class="icon icon-{{item.icon}}"></i>
+            {{item.value}}
+          </p>
+        </ng-container>
+      </div>
+    </div>
+    <div class="line-header-bottom"></div>
+  </div>
+  <div class="cv-detail">
+    <!-- Work Experience -->
+    <div class="work-experience">
+      <div class="part-title">
+        <i class="icon icon-staff"></i>
+        <span class="detail">Work Experience</span>
+      </div>
+      <div class="companies">
+        <!-- =================================== Company =================================== -->
+        <ng-container *ngFor="let company of companies; trackBy: trackByCompany;">
+          <div class="company">
+            <!--  === Company info  === -->
+            <div class="company-info">
+              <div class="logo">
+                <img src="{{company.logo}}" alt="" class="logo-content">
+              </div>
+              <div class="company-detail">
+                <div class="name">{{company.name}}</div>
+                <div class="along">
+                  <span class="company-time">{{company.time}}</span>
+                </div>
+              </div>
+            </div>
+            <!--  === Company project  === -->
+            <div class="projects">
+              <ng-container *ngFor="let project of company.projects; trackBy: trackByProject;">
+                <div class="project">
+                  <div class="project-header">
+                    <div class="time">
+                      <i class="icon icon-calendar"></i>
+                      <span class="start">{{project.time}}</span>
+                    </div>
+                    <div class="title">
+                      <i class="icon"></i>
+                      <span class="project-prefix">Project: </span>{{project.name}}
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="content-detail">
+                      <span class="title-prefix"> Description: </span>
+                      <span class="title-content">{{project.description}}</span>
+                    </p>
+                  </div>
+                  <div class="role">
+                    <span class="title-prefix"> Role in project: </span>
+                    <ng-container *ngFor="let role of project.rolesInProject; trackBy: trackByRole;last as lst;">
+                      <span class="role-detail {{lst ? 'last':''}}">
+                        <i class="icon icon-{{role.icon}}"></i>
+                        {{role.value}}
+                      </span>
+                    </ng-container>
+                  </div>
+                  <div class="technical">
+                    <p class="tech-1">
+                      <span class="title-prefix">Technical used:</span>
+                      <ng-container *ngFor="let technical of project.technicalUsed;last as lst;">
+                        <span class="tech {{lst ? 'last':''}}">
+                          <i class="icon icon-{{technical.icon}}"></i>
+                          {{technical.value}}
+                        </span>
+                      </ng-container>
+                    </p>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <!-- Education -->
+    <div class="education">
+      <div class="part-title">
+        <i class="icon icon-library"></i>
+        <span class="detail">Education</span>
+      </div>
+      <ng-container *ngFor="let edu of educations;">
+        <div class="edu">
+          <div class="school">
+            <img src="{{edu.logo}}" alt="" class="school-logo">
+            <div class="info">
+              <div class="name">
+                <span class="title">Name: </span>
+                <span class="content">{{edu.name}}</span>
+              </div>
+              <div class="time">
+                <span class="title">Time: </span>
+                <span class="content">{{edu.time}}</span>
+              </div>
+              <div class="learn-about">
+                <span class="title">Specialize: </span>
+                <span class="content">{{edu.learnAbout}}</span>
+              </div>
+              <div class="graduate">
+                <span class="title">Graduate: </span>
+                <span class="content">{{edu.result}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <!-- Language -->
+    <div class="language">
+      <div class="part-title">
+        <i class="icon icon-earth"></i>
+        <span class="detail">Foreign Language</span>
+      </div>
+      <div class="language-cover">
+        <ng-container *ngFor="let language of foreignLanguage;">
+          <div class="language">
+            <div class="lang">
+              <img src="{{language.logo}}" alt="" class="language-logo">
+              <div class="info">
+                <div class="name">
+                  <!-- <span class="title">Language: </span> -->
+                  <span class="content">{{language.name}}</span>
+                </div>
+                <ng-container *ngFor="let level of language.level;">
+                  <div class="level">
+                    <span class="title">{{level.name}}: </span>
+                    <span class="content">{{level.value}}</span>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <!-- Technical -->
+    <div class="technicals">
+      <div class="part-title">
+        <i class="icon icon-cogs"></i>
+        <span class="detail">Technical Experience</span>
+      </div>
+      <div class="technical-content">
+        <ng-container *ngFor="let topic of technicalsExperience; trackBy: trackByTechnical;">
+          <div class="technical-topic">
+            <div class="topic-title">
+              <div class="cirecle"></div>
+              <div class="topic-title-detail">
+                <i class="icon"></i>
+                {{topic.name}}
+              </div>
+            </div>
+            <div class="topic-detail">
+              <ng-container *ngFor="let tech of topic.contents; trackBy: trackByTech">
+                <div class="content">
+                  <div class="technical-logo">
+                    <img src="{{tech.logo}}" class="technical-logo-img {{tech.otherClass || ''}}">
+                  </div>
+                  <div class="technical-name">{{tech.name}}</div>
+                  <div class="technical-amount">{{getTimeRange(tech.start, tech.end)}}</div>
+                  <div class="technical-other-info">{{tech.other}}</div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <!-- Soft skill -->
+    <div class="soft-skill">
+      <div class="part-title">
+        <i class="icon icon-share2"></i>
+        <span class="detail">Soft-Skill</span>
+      </div>
+      <div class="soft-skill-cover">
+        <ng-container *ngFor="let softSkill of softSkills;">
+          <p class="soft-skill-content">
+            <i class="icon icon-{{softSkill.icon}}"></i>
+            {{softSkill.content}}
+          </p>
+        </ng-container>
+      </div>
+    </div>
+    <!-- Hobbies -->
+    <div class="hobbies">
+      <div class="part-title">
+        <i class="icon icon-heart"></i>
+        <span class="detail">Hobbies</span>
+      </div>
+      <div class="hobbies-cover">
+        <ng-container *ngFor="let hobby of hobbies;">
+          <div class="hobby-cover">
+            <img src="{{hobby.icon}}" alt="" class="hobby-icon">
+            <div class="hobby-name">{{hobby.name}}</div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

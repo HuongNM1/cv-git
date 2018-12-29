@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'utmavo';
+	src: url('./css/fonts/utmavo.eot');
+	src: local('utmavo'), url('./css/fonts/utmavo.woff') format('woff'), url('./css/fonts/utmavo.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'utmavobold';
+	src: url('./css/fonts/UTMAvoBold.eot');
+	src: local('utmavobold'), url('./fonts/UTMAvoBold.woff') format('woff'), url('./fonts/UTMAvoBold.ttf') format('truetype');
+}

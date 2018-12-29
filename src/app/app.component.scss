@@ -1,0 +1,414 @@
+@media print {
+    body, .page {
+        margin: 0;
+        box-shadow: 0;
+    }
+}
+@media all{
+    .page {
+        background: white;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 0.5cm;
+        box-shadow: 2px #000000;
+        font-family: 'arial' !important;
+        font-size: 15px;
+        &[size="A4"] {  
+            width: 21cm;
+            height: 29.7cm;
+        }
+    }
+    body {
+        background: #ffffff;
+    }
+    .profile{
+        position: relative;
+        .icon{
+            font-size: 5mm;
+            margin-right: 2mm;
+        }
+        .name{
+            top: 2mm;
+            border: 1px solid #000000;
+            background-color: #000 !important;
+            -webkit-print-color-adjust: exact;
+            color: #fff;
+            padding: 2mm 4mm 2mm 3cm;
+            border-radius: 8mm;
+            left: 19mm;
+            display: inline-block;
+            position: absolute;
+            font-family: 'Century' !important;
+            .name-value{
+                font-size: 5mm;
+                font-weight: bold;
+            }
+            .job{
+                font-size: 3mm;
+                font-style: italic;
+                text-align: right;
+            }
+        }
+        .avatar{
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            width: 5cm;
+            height: 5cm;
+            border-radius: 50%;
+            border-top: 4px solid #000000;
+            // border-bottom: 1px solid #000000;
+            display: inline-block;
+            float: left;
+        }
+        .avatar-detail{
+            width: 5cm;
+            height: 7cm;
+            position: relative;
+            top: -.5cm;
+        }    
+        .line{
+            height: 1.5cm;
+            width: 6mm;
+            margin-top: 24mm;
+            border-left: 1px solid #000; 
+        }
+        .line-header-bottom{
+            height: 1mm;
+            width: 60%;
+            margin: 0 auto;
+            border-bottom: 1px solid #000000;
+        } 
+        .contact-info{
+            display: flex;
+            position: relative;
+            width: 100%;
+            padding: 0 0 3mm 0;
+            box-sizing: border-box;
+        }   
+        .information,
+        .contact{
+            padding-top: 15mm;
+            p{
+                margin: 3.5mm;
+            }
+        }
+        .information{
+            display: inline-block;
+            padding-right: 2cm;
+        }
+        .contact{
+            display: inline-block;
+        }
+    }
+    /* Work Experience */
+    .work-experience{
+        position: relative;
+        .company{
+            display: flex;
+            margin-top: 5mm;
+            .company-info{ 
+                width: 4cm;
+                margin-right: 3mm;
+                text-align: center;
+            }
+            .projects{
+                border-left: 1px solid #666666;
+                padding-left: 3mm;
+                .project{
+                    padding-top: 3mm;
+                    &:not(:first-child){
+                        padding-top: 5mm;
+                    }
+                    .project-header{
+                        position: relative;
+                        .project-prefix{
+                            font-size: 3mm !important;
+                        }
+                    }
+                    .time{
+                        position: relative;
+                        display: inline-block;
+                        left: -3mm;
+                        padding: 2mm 1mm 1mm 2mm;
+                        width: 4.5cm;
+                        font-style: italic;
+                        font-weight: bold;
+                        line-height: 6mm;
+                        background-color: #666666;
+                        -webkit-print-color-adjust: exact;
+                        border-top-right-radius: 1mm;
+                        color: #fff;
+                        border-bottom-right-radius: 1mm;
+                        .icon{
+                            margin-right: 2mm;
+                            position: relative;
+                        }
+                    }
+                    .title{
+                        display: inline-block;
+                        position: relative;
+                        float: right;
+                        font-size: 5mm;
+                        font-weight: bold;
+                        font-style: italic;
+                        border-bottom: 1px solid #666666;
+                        text-align: right;
+                        padding-bottom: .3mm;
+                    }
+                    .technical .tech,
+                    .role .role-detail{
+                        display: inline-block;
+                        padding: 0 2mm;
+                    }
+                    .technical .tech:not(.last),
+                    .role .role-detail:not(.last){
+                        border-right: 1px solid #666;
+                    }
+                    .title-prefix{
+                        display: inline-block;
+                        font-weight: bold;
+                        margin-right: 1mm;
+                        vertical-align: top;
+                    }
+                    .title-content{
+                        display: inline-block;
+                        max-width: 13cm;
+                    }
+                }
+            }
+            .company-detail{
+                .name{
+                    font-size: 4mm;
+                    font-weight: bold;
+                }
+                .along{
+                    font-size: 3mm;
+                    font-style: italic;
+                    color: #666666;
+                }
+            }
+        }
+    }
+    /* Title */
+    .part-title{
+        margin-top: 10mm;
+        font-size: 7mm;
+        font-weight: bold;
+    }
+    /* Logo */
+    .logo{
+        width: 30mm;
+        height: 30mm;
+        display: inline-block;
+        overflow: hidden;
+        border: 1px solid #cccfff;
+        border-radius: 2mm;
+        padding: 2mm;
+    }
+    .logo-content{
+        width: 100%;
+        height: 100%;
+    }
+    .cv-detail{
+        padding: 2mm 2mm 2mm 4mm;
+    }
+    .technical-content{
+        padding-left: 4mm;
+        display: inline-block;
+        margin-top: 5mm;
+    }
+    .topic-title{
+        position: relative;
+        margin-left: 5mm;
+    }
+    .cirecle{
+        position: absolute;
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background-color: #ffffff;
+        z-index: 1;
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+    }
+    .technicals{
+        margin-top: 2cm;
+    }
+    .technical-topic{
+        float: left;
+        position: relative;
+        margin-top: 3mm;
+    }
+    .topic-title-detail{
+        background-color: #666666;
+        -webkit-print-color-adjust: exact;
+        color: #ffffff;
+        padding: 0mm 3mm 1mm 5mm;
+        display: inline-block;
+        line-height: 6mm;
+        position: relative;
+        border-top-right-radius: 2mm;
+        border-bottom-left-radius: 2mm;
+        top: 0;
+    }
+    .topic-detail{
+        margin-left: 1cm;
+        display: inline-block;
+        border-left: 1px solid #cccccc;
+        .content{
+            text-align: center;
+            display: inline-block;
+            margin: 5mm;
+            vertical-align: top;
+        }
+    }
+    .technical-logo{
+        display: inline-block;
+        position: relative;
+        padding: 1mm;
+        border: 1px solid #a2a1a1;
+        border-radius: 2mm;
+    }
+    .technical-logo-img{
+        position: relative;
+        display: block;
+        width: 1.5cm;
+        height: 1.5cm;
+        &.microsoft{
+            width: 3cm;
+            border-radius: 1mm;
+        }
+    }
+    .technical-name{
+        font-size: 3mm;
+        font-weight: bold;
+        max-width: 3cm;
+    }
+    .technical-amount{
+        font-size: 3mm;
+        font-style: italic;
+        color: #666666;
+    }
+    .technical-other-info{
+        font-size: 3mm;
+        color: #666666;
+        max-width: 3cm;
+    }
+    .part-title{
+        .icon{
+            margin: 0 2mm;
+        }
+    }
+    .education{
+        .edu{
+            margin-top: 5mm;
+            margin-left: 12mm;
+            display: flex;
+            .school{
+                .school-logo{
+                    width: 3cm;
+                    height: 2cm;
+                    display: inline-block;
+                    vertical-align: top;
+                    border: 1px solid #cccfff;
+                    border-radius: 2mm;
+                    margin-top: 3mm;
+                }
+                .info{
+                    display: inline-block;
+                    vertical-align: center;
+                    margin-left: 3mm;
+                    div{
+                        margin: 2mm 1mm;
+                    }
+                    .title{
+                        display: inline-block;
+                        width: 3cm;
+                        font-weight: bold;
+                    }
+                    .content{
+                        display: inline-block;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+    .language-cover{
+        display: flex;
+        .language{
+            &:not(:first-child){
+                margin-left: 1.5cm;
+            }
+            .lang{
+                margin-top: 5mm;
+                margin-left: 12mm;
+                display: flex;
+                .language-logo{
+                    width: 2cm;
+                    height: 2cm;
+                    display: inline-block;
+                    vertical-align: top;
+                    border: 1px solid #cccfff;
+                    margin-top: 8mm;
+                    border-radius: 50%;
+                }
+                .info{
+                    display: inline-block;
+                    margin-left: 3mm;
+                    vertical-align: top;
+                    .name{
+                        .content{
+                            font-weight: bold;
+                            text-decoration: underline;
+                            font-size: 18px;
+                        }
+                    }
+                    div{
+                        margin: 2mm 1mm;
+                    }
+                    .title{
+                        display: inline-block;
+                        width: 3cm;
+                        font-weight: bold;
+                    }
+                    .content{
+                        display: inline-block;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+    .soft-skill{
+        margin-top: 22mm;
+        .soft-skill-cover{
+            margin-left: 12mm;
+        }
+    }
+    .hobbies-cover{
+        margin-left: 9mm;
+        .hobby-cover{
+            display: inline-block;
+            text-align: center;
+            margin: 5mm 3mm;
+            vertical-align: top;
+            .hobby-icon{
+                width: 2cm;
+                height: 2cm;
+                border: 1px solid #cccfff;
+                border-radius: 3mm;
+                padding: 2mm;
+                display: block;
+            }
+            .hobby-name{
+                max-width: 2cm;
+                text-align: center;
+                padding-top: 1mm;
+                padding-left: 2mm;
+            }
+        }
+    }
+}
