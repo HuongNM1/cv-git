@@ -160,7 +160,7 @@ export class AppComponent {
       name: 'Back-end And Database',
       contents: [
         { logo: this.logoFolder + 'nodejs.png', name: 'Nodejs', start: new Date('3/1/2018'), end: new Date(), other: '' },
-        { logo: this.logoFolder + 'python.png', name: 'CSS3', start: new Date('10/1/2016'), end: new Date('1/30/2017'), other: '' },
+        { logo: this.logoFolder + 'python.png', name: 'Python', start: new Date('10/1/2016'), end: new Date('1/30/2017'), other: '' },
         { logo: this.logoFolder + 'wiki.png', name: 'Mediawiki', start: new Date('2/1/2017'), end: new Date('4/30/2017'), other: '' },
         { logo: this.logoFolder + 'MySQL-1.png', name: 'MySql', start: new Date('6/1/2018'), end: new Date(), other: '' }
       ]
@@ -250,7 +250,6 @@ export class AppComponent {
    * Data for hobbies
    */
   hobbies = [
-    { icon: this.logoFolder + 'baby.png', name: 'Play with my baby daughter' },
     { icon: this.logoFolder + 'fishing.png', name: 'Fishing' },
     { icon: this.logoFolder + 'vovinam.jpg', name: 'Vovinam' },
     { icon: this.logoFolder + 'bycicle.jpg', name: 'Bycicle' },
