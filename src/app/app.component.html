@@ -69,7 +69,7 @@
                   <div class="content">
                     <p class="content-detail">
                       <span class="title-prefix"> Description: </span>
-                      <span class="title-content">{{project.description}}</span>
+                      <span class="title-content" [innerHTML]='project.description'></span>
                     </p>
                   </div>
                   <div class="role">
@@ -92,6 +92,38 @@
                       </ng-container>
                     </p>
                   </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <!-- Technical -->
+    <div class="technicals">
+      <div class="part-title">
+        <i class="icon icon-cogs"></i>
+        <span class="detail">Technical Experience</span>
+      </div>
+      <div class="technical-content">
+        <ng-container *ngFor="let topic of technicalsExperience; trackBy: trackByTechnical;">
+          <div class="technical-topic">
+            <div class="topic-title">
+              <div class="cirecle"></div>
+              <div class="topic-title-detail">
+                <i class="icon"></i>
+                {{topic.name}}
+              </div>
+            </div>
+            <div class="topic-detail">
+              <ng-container *ngFor="let tech of topic.contents; trackBy: trackByTech">
+                <div class="content">
+                  <div class="technical-logo">
+                    <img src="{{tech.logo}}" class="technical-logo-img {{tech.otherClass || ''}}">
+                  </div>
+                  <div class="technical-name">{{tech.name}}</div>
+                  <div class="technical-amount">{{getTimeRange(tech.start, tech.end)}}</div>
+                  <div class="technical-other-info">{{tech.other}}</div>
                 </div>
               </ng-container>
             </div>
@@ -154,38 +186,6 @@
                   </div>
                 </ng-container>
               </div>
-            </div>
-          </div>
-        </ng-container>
-      </div>
-    </div>
-    <!-- Technical -->
-    <div class="technicals">
-      <div class="part-title">
-        <i class="icon icon-cogs"></i>
-        <span class="detail">Technical Experience</span>
-      </div>
-      <div class="technical-content">
-        <ng-container *ngFor="let topic of technicalsExperience; trackBy: trackByTechnical;">
-          <div class="technical-topic">
-            <div class="topic-title">
-              <div class="cirecle"></div>
-              <div class="topic-title-detail">
-                <i class="icon"></i>
-                {{topic.name}}
-              </div>
-            </div>
-            <div class="topic-detail">
-              <ng-container *ngFor="let tech of topic.contents; trackBy: trackByTech">
-                <div class="content">
-                  <div class="technical-logo">
-                    <img src="{{tech.logo}}" class="technical-logo-img {{tech.otherClass || ''}}">
-                  </div>
-                  <div class="technical-name">{{tech.name}}</div>
-                  <div class="technical-amount">{{getTimeRange(tech.start, tech.end)}}</div>
-                  <div class="technical-other-info">{{tech.other}}</div>
-                </div>
-              </ng-container>
             </div>
           </div>
         </ng-container>

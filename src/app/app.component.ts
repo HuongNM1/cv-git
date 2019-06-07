@@ -38,8 +38,16 @@ export class AppComponent {
       projects: [
         {
           time: 'Apr 2018 - Now',
-          name: 'Cyber Sale',
-          description: 'Create admin page to manage information of user, customer, config page,...',
+          name: 'Cyber Sale (Northstar)',
+          description: `Create admin page to manage information of user, customer, config page,...<br>
+                        <u><i>In this page, I join:</i></u><br>
+                         - Table list: filter functions, edit content on table, lazy load, paging, event on table items...<br>
+                         - Paging table<br>
+                         - Dashboard: create core template to qucik render multiple charts as pie chart, line chart, column chart,... Canvasjs library is cover to render all most charts. Some special chart which need to render by myself use canvas.<br>
+                         - Sidebar menu: create sidebar menu which can store status 'push/dock' mode of menu, hanlde focus menu item when change router, refresh, collapse/expand menu item...<br>
+                         - Calendar: create calendar component by myself, calendar can change mode choice is date unit or month unit.<br>
+                         - Build template for one page in project, improve perfomance web page,...<br>
+                         - Some task about backend as create simple api get data from store procedure. Create some procedure in mySql to select data.`,
           rolesInProject: [{ value: 'Full-stack Developer', icon: 'staff2' }],
           technicalUsed: [
             { value: 'Angularjs 4', icon: 'angular' },
@@ -52,7 +60,12 @@ export class AppComponent {
         {
           time: 'Oct 2017 - Apr 2018',
           name: 'Cyber Insight',
-          description: 'Create admin page to manage information of user, customer, config page,...',
+          description: `Create admin page to manage information of user, customer, config page,...<br>
+                        <u><i>In this page, I join:</i></u><br>
+                          - Create tab template show each type of information of user<br>
+                          - Handle to show item with avatar image and information like as facebook UI.<br>
+                          - Some other task.
+                        `,
           rolesInProject: [{ value: 'Front-end Developer', icon: 'staff2' }],
           technicalUsed: [
             { value: 'Angularjs 4', icon: 'angular' },
@@ -69,7 +82,12 @@ export class AppComponent {
         {
           time: 'Apr 2017 - Oct 2017',
           name: 'Simple copy',
-          description: 'Create copy function for printer.',
+          description: `Create copy function for printer. This function show screen saving when user is printing.<br>
+                       The saver screen contain:<br>
+                       - Weather screen: get information of broadcast weather api. After about 10 seconds, next to continue screen<br>
+                       - Traffic screen: show traffic information. After about 10 seconds, next to continue screen<br>
+                       - Minigame screen: create a minigame. It like spining minigame.
+                      `,
           rolesInProject: [
             { value: 'Team lead', icon: 'teamlead' },
             { value: 'Developer', icon: 'staff2' },
@@ -85,7 +103,7 @@ export class AppComponent {
         {
           time: 'Feb 2017 - Apr 2017',
           name: 'Mediawiki search painting',
-          description: 'Create website base on mediawiki framework.',
+          description: 'Create website base on mediawiki framework. This website is used to show picture follow some type. User can go to this wiki site to search image by name, type,...',
           rolesInProject: [{ value: 'PM', icon: 'pm' }],
           technicalUsed: [
             { value: 'Javascript', icon: 'javascript' },
@@ -96,7 +114,7 @@ export class AppComponent {
         {
           time: 'Dec 2016 - Jan 2017',
           name: 'Create backend analytic methods',
-          description: 'Handling analytic streak and spot.',
+          description: 'Handling analytic streak and spot. This system has some methods were created to return result for user which show number of spot, streak in one image',
           rolesInProject: [
             { value: 'Team lead', icon: 'teamlead' },
             { value: 'Developer', icon: 'staff2' }
@@ -121,7 +139,7 @@ export class AppComponent {
         {
           time: 'Jul 2014 - Dec 2015',
           name: 'RSCUI',
-          description: 'Deploy web application which display printing phases of printer machine.',
+          description: `Deploy web application which display printing phases of printer machine.`,
           rolesInProject: [
             { value: 'Developer', icon: 'staff2' },
             { value: 'Tester', icon: 'tester' }
@@ -147,12 +165,12 @@ export class AppComponent {
         { logo: this.logoFolder + 'html5.png', name: 'HTML5', start: new Date('7/1/2014'), end: new Date(), other: '' },
         { logo: this.logoFolder + 'css3.png', name: 'CSS3', start: new Date('7/1/2014'), end: new Date(), other: '' },
         { logo: this.logoFolder + 'javascript.png', name: 'Javascript', start: new Date('7/1/2014'), end: new Date(), other: '' },
-        { logo: this.logoFolder + 'Angular.png', name: 'Angular', start: new Date('10/1/2017'), end: new Date(), other: '' },
+        { logo: this.logoFolder + 'Angular.png', name: 'Angular', start: new Date('10/1/2017'), end: new Date(), other: 'Build page template, self-create common components (chart, calendar,...)' },
         { logo: this.logoFolder + 'Jquery.png', name: 'Jquery', start: new Date('7/1/2014'), end: new Date(), other: '' },
         { logo: this.logoFolder + 'bootstrap.png', name: 'Bootstrap', start: new Date('7/1/2014'), end: new Date(), other: '' },
         { logo: this.logoFolder + 'canvasjs.jpg', name: 'Canvasjs', start: new Date('12/1/2017'), end: new Date(), other: '' },
         { logo: this.logoFolder + 'd3js.png', name: 'D3js', start: new Date('1/1/2015'), end: new Date('7/1/2015'), other: '' },
-        { logo: this.logoFolder + 'less.png', name: 'Less', start: new Date('6/1/2017'), end: new Date(), other: '' },
+        { logo: this.logoFolder + 'less.png', name: 'Less', start: new Date('6/1/2017'), end: new Date('6/1/2018'), other: '' },
         { logo: this.logoFolder + 'sass.png', name: 'SASS', start: new Date('6/1/2017'), end: new Date(), other: '' }
       ]
     },

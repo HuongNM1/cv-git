@@ -3,6 +3,13 @@
         margin: 0;
         box-shadow: 0;
     }
+    .work-experience{
+        .company{
+            &:nth-child(2){
+                page-break-before: always;
+            }
+        }
+    }
 }
 @media all{
     .page {
@@ -216,7 +223,7 @@
     .technical-content{
         padding-left: 4mm;
         display: inline-block;
-        margin-top: 5mm;
+        margin-top: 2mm;
     }
     .topic-title{
         position: relative;
@@ -234,7 +241,7 @@
         left: 4px;
     }
     .technicals{
-        margin-top: 2cm;
+        margin-top: .5cm;
     }
     .technical-topic{
         float: left;
@@ -383,7 +390,7 @@
         }
     }
     .soft-skill{
-        margin-top: 22mm;
+        // margin-top: 22mm;
         .soft-skill-cover{
             margin-left: 12mm;
         }
