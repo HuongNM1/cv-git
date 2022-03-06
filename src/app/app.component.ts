@@ -33,13 +33,13 @@ export class AppComponent {
   companies = [
     {
       name: 'LINE Technology Vietnam',
-      time: 'Aug 2019 - Now',
+      time: 'Aug 2019 - Dec 2021',
       logo: '../assets/image/ltv.png',
       projects: [
         {
-          time: 'Aug 2019 - Now',
-          name: 'I can\'t public the project of company',
-          description: 'Using Vuejs, nuxtjs framwork, Line internal service to build CMS systems, create novel pages,...',
+          time: 'Aug 2019 - Dec 2021',
+          name: 'LineOA, Line Novel, Line News',
+          description: 'Using Vuejs, nuxtjs framwork, Line internal service to build CMS systems (LineOA), create novel pages (Line Novel),...',
           rolesInProject: [{ value: 'Front-end Developer', icon: 'staff2' }],
           technicalUsed: [
             { value: 'Vuejs', icon: 'vuejs' },
@@ -241,22 +241,22 @@ export class AppComponent {
       logo: this.logoFolder + 'en.png',
       name: 'English',
       level: [
-        { name: 'Listening', value: 'Normal' },
-        { name: 'Reading', value: 'Good' },
-        { name: 'Speaking', value: 'Normal' },
-        { name: 'Writing', value: 'Normal' }
+        { name: 'Listening', value: 'Listen and comprehend 60%-70%' },
+        { name: 'Reading', value: 'Read document about technical, project specification,...' },
+        { name: 'Speaking', value: 'I can speak simple sentences' },
+        { name: 'Writing', value: 'Write email, project documents,...' }
       ]
     },
-    {
-      logo: this.logoFolder + 'jp.png',
-      name: 'Japanese',
-      level: [
-        { name: 'Listening', value: 'Beginer' },
-        { name: 'Reading', value: 'Beginer' },
-        { name: 'Speaking', value: 'Beginer' },
-        { name: 'Writing', value: 'Beginer' }
-      ]
-    }
+    // {
+    //   logo: this.logoFolder + 'jp.png',
+    //   name: 'Japanese',
+    //   level: [
+    //     { name: 'Listening', value: 'Beginer' },
+    //     { name: 'Reading', value: 'Beginer' },
+    //     { name: 'Speaking', value: 'Beginer' },
+    //     { name: 'Writing', value: 'Beginer' }
+    //   ]
+    // }
   ];
 
   /**
