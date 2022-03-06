@@ -224,13 +224,13 @@ export class AppComponent {
       result: 'Good',
       logo: this.logoFolder + 'fu.png'
     },
-    {
-      name: 'FPT Software',
-      time: 'From Jan 2013 To May 2013',
-      learnAbout: 'On job training at FPTSoftware',
-      result: 'Very Good (In top 5)',
-      logo: this.logoFolder + 'fsoft.png'
-    }
+    // {
+    //   name: 'FPT Software',
+    //   time: 'From Jan 2013 To May 2013',
+    //   learnAbout: 'On job training at FPTSoftware',
+    //   result: 'Very Good (In top 5)',
+    //   logo: this.logoFolder + 'fsoft.png'
+    // }
   ];
 
   /**

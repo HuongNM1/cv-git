@@ -6,7 +6,7 @@
     .work-experience{
         .company{
             &:nth-child(2){
-                page-break-before: always;
+                page-break-after: avoid;
             }
         }
     }
